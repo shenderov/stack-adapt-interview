@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="SimpleFlowTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2019-12-23T01:19:48" hostname="Konstantins-MBP.hitronhub.home" time="1.5">
+  <properties/>
+  <testcase name="validateHeader" classname="SimpleFlowTest" time="0.035"/>
+  <testcase name="clickOnGetPracticing" classname="SimpleFlowTest" time="0.34"/>
+  <testcase name="clickSimpleFormDemo" classname="SimpleFlowTest" time="0.655"/>
+  <testcase name="validateSingleInputField" classname="SimpleFlowTest" time="0.466"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[[Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Using geckodriver 0.26.0 (since Mozilla Firefox 70 is installed in your machine)
+[Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.gecko.driver as /Users/kostya/.m2/repository/webdriver/geckodriver/macos/0.26.0/geckodriver
+1577063980621	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/mr/c33c1tl569n0lz2ll5q9d1pm0000gn/T/rust_mozprofileDhUHGG"
+1577063981445	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1577063981446	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1577063981446	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1577063981446	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1577063983730	Marionette	INFO	Listening on port 60238
+1577063983777	Marionette	WARN	TLS certificate errors will be ignored for this session
+Dec 22, 2019 7:19:43 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+</testsuite>
