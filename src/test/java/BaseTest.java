@@ -8,6 +8,7 @@ import tools.ScreenshotOnFail;
 public abstract class BaseTest {
 
     private static String hostname = System.getProperty("hostname");
+    private static String driverType = System.getProperty("driver_type");
     static WebDriver driver;
     static IndexPage indexPage;
 
@@ -17,7 +18,9 @@ public abstract class BaseTest {
     public void setup() throws Exception {
         DriverManager driverManager = new DriverManager();
         driver = driverManager.getDriver();
-        driver.manage().window().fullscreen();
+        if(!driverType.equals("phantomjs")){
+            driver.manage().window().fullscreen();
+        }
         indexPage = initializeTest();
     }
 
