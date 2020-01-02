@@ -38,5 +38,14 @@ test {
     systemProperty "driver_type", project.hasProperty("driver_type") ? project.property("driver_type") : "chrome"
     systemProperty "hostname", project.hasProperty("hostname") ? project.property("hostname") : hostname
 
-    useTestNG()
+    useTestNG() {
+        useDefaultListeners = true
+        if(project.hasProperty("suiteFile") && !(project.property("suiteFile") as String).isEmpty()){
+            suites "src/test/resources/suites/${project.property("suiteFile")}"
+        }
+    }
+    testLogging {
+        events "PASSED", "FAILED", "SKIPPED"
+    }
+    reports.html.enabled = false
 }

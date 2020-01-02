@@ -2,6 +2,7 @@ import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
 
+@Test(groups = "index")
 public class IndexPageTest extends BaseTest {
 
     @Test

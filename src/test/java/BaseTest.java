@@ -14,7 +14,7 @@ public abstract class BaseTest {
 
     public ScreenshotOnFail screenShootRule = new ScreenshotOnFail(driver);
 
-    @BeforeClass
+    @BeforeClass(alwaysRun = true)
     public void setup() throws Exception {
         DriverManager driverManager = new DriverManager();
         driver = driverManager.getDriver();
@@ -24,7 +24,7 @@ public abstract class BaseTest {
         indexPage = initializeTest();
     }
 
-    @AfterClass
+    @AfterClass(alwaysRun = true)
     public static void cleanup() {
         driver.quit();
     }

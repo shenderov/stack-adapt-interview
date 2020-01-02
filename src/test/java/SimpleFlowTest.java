@@ -5,6 +5,7 @@ import test.pageobjects.WelcomePage;
 
 import static org.testng.Assert.assertEquals;
 
+@Test(groups = "flow")
 public class SimpleFlowTest extends BaseTest {
 
     private WelcomePage welcomePage;
