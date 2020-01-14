@@ -7,8 +7,8 @@ import tools.ScreenshotOnFail;
 
 public abstract class BaseTest {
 
-    private static String hostname = System.getProperty("hostname");
-    private static String driverType = System.getProperty("driver_type");
+    private static String baseUrl = System.getProperty("baseUrl");
+    private static String driverType = System.getProperty("driverType");
     static WebDriver driver;
     static IndexPage indexPage;
 
@@ -30,7 +30,7 @@ public abstract class BaseTest {
     }
 
     private static IndexPage initializeTest() {
-        driver.get(hostname);
+        driver.get(baseUrl);
         indexPage = new IndexPage(driver);
         return indexPage;
     }

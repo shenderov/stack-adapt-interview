@@ -17,7 +17,7 @@ public class DriverManager {
     }
 
     private void setDriver() throws Exception {
-        String driverType = System.getProperty("driver_type") == null ? "chrome" : System.getProperty("driver_type");
+        String driverType = System.getProperty("driverType");
         if (driver == null) {
             switch (driverType) {
                 case "chrome":

@@ -31,12 +31,12 @@ dependencies {
     compile("org.slf4j:slf4j-simple:1.7.29")
 }
 
-def hostname = "https://www.seleniumeasy.com/test/"
+def baseUrl = "https://www.seleniumeasy.com/test/"
 
 test {
     outputs.upToDateWhen { false }
-    systemProperty "driver_type", project.hasProperty("driver_type") ? project.property("driver_type") : "chrome"
-    systemProperty "hostname", project.hasProperty("hostname") ? project.property("hostname") : hostname
+    systemProperty "driverType", project.hasProperty("driverType") ? project.property("driverType") : "chrome"
+    systemProperty "baseUrl", project.hasProperty("baseUrl") ? project.property("baseUrl") : baseUrl
 
     useTestNG() {
         useDefaultListeners = true

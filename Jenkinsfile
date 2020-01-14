@@ -6,7 +6,7 @@ pipeline {
 
     parameters {
         string(name: "BRANCH", description: "Branch to build from", defaultValue: "master")
-        string(name: "HOSTNAME", description: "Override default hostname", defaultValue: "https://www.seleniumeasy.com/test/")
+        string(name: "BASE_URL", description: "Override default base URL", defaultValue: "https://www.seleniumeasy.com/test/")
         string(name: "SUITE_FILE", description: "Specify TestNG Suite XML file under src/test/resources/suites/", defaultValue: "")
         choice(name: 'BROWSER', description: "NOTE: In order to run driver different from PhantomJS, you need an agent with GUI and browser installed", choices: 'phantomjs\nchrome\nfirefox\nopera\nie\nedge')
     }
@@ -28,7 +28,7 @@ pipeline {
             steps {
                 script {
                     echo "Start test running..."
-                    sh "./gradlew clean test -Pdriver_type=${params.BROWSER} -Phostname=${params.HOSTNAME} -PsuiteFile=${params.SUITE_FILE}"
+                    sh "./gradlew clean test -PdriverType=${params.BROWSER} -PbaseUrl=${params.BASE_URL} -PsuiteFile=${params.SUITE_FILE}"
                 }
             }
         }
