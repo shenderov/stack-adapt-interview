@@ -1,7 +1,9 @@
+package me.shenderov.automation.tests;
+
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import test.pageobjects.SimpleFormDemoPage;
-import test.pageobjects.WelcomePage;
+import me.shenderov.automation.test.pageobjects.SimpleFormDemoPage;
+import me.shenderov.automation.test.pageobjects.WelcomePage;
 
 import static org.testng.Assert.assertEquals;
 

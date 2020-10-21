@@ -11,8 +11,6 @@ plugins {
 group 'me.shenderov'
 version '1.0-SNAPSHOT'
 
-sourceCompatibility = 1.8
-
 repositories {
     jcenter()
 }
@@ -25,24 +23,33 @@ dependencies {
     compile("org.seleniumhq.selenium:selenium-opera-driver:${seleniumVersion}")
     compile("org.seleniumhq.selenium:selenium-edge-driver:${seleniumVersion}")
     compile("org.seleniumhq.selenium:selenium-ie-driver:${seleniumVersion}")
+    compile("org.seleniumhq.selenium:selenium-safari-driver:${seleniumVersion}")
     compile("com.codeborne:phantomjsdriver:1.4.4")
-    compile("io.github.bonigarcia:webdrivermanager:3.7.1")
+    compile("io.github.bonigarcia:webdrivermanager:4.2.2")
     compile("org.testng:testng:6.14.3")
     compile("org.slf4j:slf4j-simple:1.7.29")
+    compile("org.apache.httpcomponents:httpclient:4.5.12")
 }
 
+//Default base URL value
 def baseUrl = "https://www.seleniumeasy.com/test/"
+//Default test suite file
+def suiteFile = "all-classes.xml"
 
 test {
-    outputs.upToDateWhen { false }
-    systemProperty "driverType", project.hasProperty("driverType") ? project.property("driverType") : "chrome"
-    systemProperty "baseUrl", project.hasProperty("baseUrl") ? project.property("baseUrl") : baseUrl
-
+    outputs.upToDateWhen { false } //always discard previous run
+    systemProperty "driverType", project.hasProperty("driverType") ? project.property("driverType") : "chrome" //set driver type or use default
+    systemProperty "baseUrl", project.hasProperty("baseUrl") ? project.property("baseUrl") : baseUrl //set base URL or use default
+    systemProperty "hubUrl", project.hasProperty("hubUrl") ? project.property("hubUrl") : null //set Hub URL
+    systemProperty "browserstackUsername", project.hasProperty("browserstackUsername") ? project.property("browserstackUsername") : null //set Browserstack username
+    systemProperty "browserstackKey", project.hasProperty("browserstackKey") ? project.property("browserstackKey") : null //set Browserstack key
+    systemProperty "capabilitiesFilename", project.hasProperty("capabilitiesFilename") ? project.property("capabilitiesFilename") : null //set capabilities filename
+    systemProperty "jobName", project.hasProperty("jobName") ? project.property("jobName") : null //Jenkins job name to use in Test listener
+    systemProperty "buildNumber", project.hasProperty("buildNumber") ? project.property("buildNumber") : null //Jenkins build number to use in Test listener
+    //Config TestNG
     useTestNG() {
         useDefaultListeners = true
-        if(project.hasProperty("suiteFile") && !(project.property("suiteFile") as String).isEmpty()){
-            suites "src/test/resources/suites/${project.property("suiteFile")}"
-        }
+        suites "src/test/resources/suites/${project.hasProperty("suiteFile") && !(project.property("suiteFile") as String).isEmpty() ? project.property("suiteFile") : suiteFile}"
     }
     testLogging {
         events "PASSED", "FAILED", "SKIPPED"

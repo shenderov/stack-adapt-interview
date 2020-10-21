@@ -1,3 +1,5 @@
+package me.shenderov.automation.tests;
+
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;

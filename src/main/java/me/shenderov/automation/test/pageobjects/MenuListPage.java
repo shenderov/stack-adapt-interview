@@ -1,4 +1,4 @@
-package test.pageobjects;
+package me.shenderov.automation.test.pageobjects;
 
 import org.openqa.selenium.WebDriver;
 
