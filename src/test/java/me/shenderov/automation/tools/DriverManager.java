@@ -9,7 +9,6 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.opera.OperaDriver;
-import org.openqa.selenium.phantomjs.PhantomJSDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.safari.SafariDriver;
@@ -67,6 +66,13 @@ public class DriverManager {
                     options.setPageLoadStrategy(PageLoadStrategy.NONE);
                     driver = new ChromeDriver(options);
                     break;
+                case "headless":
+                    WebDriverManager.chromedriver().setup();
+                    ChromeOptions headlessOptions = new ChromeOptions();
+                    headlessOptions.addArguments("--headless");
+                    headlessOptions.addArguments("--disable-gpu");
+                    driver = new ChromeDriver(headlessOptions);
+                    break;
                 case "firefox":
                     WebDriverManager.firefoxdriver().setup();
                     driver = new FirefoxDriver();
@@ -74,10 +80,6 @@ public class DriverManager {
                 case "opera":
                     WebDriverManager.operadriver().setup();
                     driver = new OperaDriver();
-                    break;
-                case "phantomjs":
-                    WebDriverManager.phantomjs().setup();
-                    driver = new PhantomJSDriver();
                     break;
                 case "edge":
                     WebDriverManager.edgedriver().setup();

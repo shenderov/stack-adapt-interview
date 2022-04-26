@@ -4,7 +4,7 @@
 
     <test name="classes">
         <classes>
-            <class name="me.shenderov.automation.tests.SimpleFlowTest"/>
+            <class name="me.shenderov.automation.tests.TutorialPagesTest"/>
         </classes>
     </test>
 

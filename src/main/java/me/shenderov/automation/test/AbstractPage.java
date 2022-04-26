@@ -8,6 +8,7 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
 import java.util.function.BooleanSupplier;
 
 /**
@@ -16,7 +17,7 @@ import java.util.function.BooleanSupplier;
  * @author Konstantin Shenderov
  *
  */
-public class AbstractPage {
+public abstract class AbstractPage {
 
     /**
      * Holds a reference to the {@code WebDriver} object to access the DOM from all page objects methods.
@@ -42,6 +43,11 @@ public class AbstractPage {
      * if atLocator is not provided.
      */
     protected ExpectedCondition<?> condition;
+
+    /**
+     * Timeout for conditional checks
+     */
+    private static final Duration TIMEOUT = Duration.ofSeconds(20);
 
     /**
      * Most basic constructor for classes, where condition and atLocator is not needed.
@@ -79,7 +85,7 @@ public class AbstractPage {
      * @return WebElement.
      */
     protected WebElement byId(String id) {
-        return (new WebDriverWait(driver, 20)).until(ExpectedConditions.presenceOfElementLocated(By.id(id)));
+        return (new WebDriverWait(driver, TIMEOUT)).until(ExpectedConditions.presenceOfElementLocated(By.id(id)));
     }
 
     /**
@@ -88,7 +94,7 @@ public class AbstractPage {
      * @return WebElement.
      */
     protected WebElement byClassName(String className) {
-        return (new WebDriverWait(driver, 20)).until(ExpectedConditions.presenceOfElementLocated(By.className(className)));
+        return (new WebDriverWait(driver, TIMEOUT)).until(ExpectedConditions.presenceOfElementLocated(By.className(className)));
     }
 
     /**
@@ -97,7 +103,7 @@ public class AbstractPage {
      * @return WebElement.
      */
     protected WebElement byTagName(String tagName) {
-        return (new WebDriverWait(driver, 20)).until(ExpectedConditions.presenceOfElementLocated(By.tagName(tagName)));
+        return (new WebDriverWait(driver, TIMEOUT)).until(ExpectedConditions.presenceOfElementLocated(By.tagName(tagName)));
     }
 
     /**
@@ -106,7 +112,7 @@ public class AbstractPage {
      * @return WebElement.
      */
     protected WebElement byLocator(By locator) {
-        return (new WebDriverWait(driver, 20)).until(ExpectedConditions.presenceOfElementLocated(locator));
+        return (new WebDriverWait(driver, TIMEOUT)).until(ExpectedConditions.presenceOfElementLocated(locator));
     }
 
     /**
@@ -115,7 +121,7 @@ public class AbstractPage {
      * @return WebElement.
      */
     protected WebElement byCss(String cssName) {
-        return (new WebDriverWait(driver, 20)).until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(cssName)));
+        return (new WebDriverWait(driver, TIMEOUT)).until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(cssName)));
     }
 
     /**
@@ -124,7 +130,7 @@ public class AbstractPage {
      * @return WebElement.
      */
     protected WebElement byXpath(String xpath) {
-        return (new WebDriverWait(driver, 20)).until(ExpectedConditions.presenceOfElementLocated(By.xpath(xpath)));
+        return (new WebDriverWait(driver, TIMEOUT)).until(ExpectedConditions.presenceOfElementLocated(By.xpath(xpath)));
     }
 
     /**
@@ -134,7 +140,7 @@ public class AbstractPage {
      * @return WebElement.
      */
     public WebElement waitUntilElementIsVisible(WebElement element, int sec) {
-        return (new WebDriverWait(driver, sec)).until(ExpectedConditions.visibilityOf(element));
+        return (new WebDriverWait(driver, Duration.ofSeconds(sec))).until(ExpectedConditions.visibilityOf(element));
     }
 
     /**
@@ -167,7 +173,7 @@ public class AbstractPage {
      */
     public void wait(int seconds) {
         try {
-            Thread.sleep(seconds * 1000);
+            Thread.sleep(Duration.ofSeconds(seconds).toMillis());
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

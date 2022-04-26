@@ -6,6 +6,8 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
+
 /**
  * This is test functionality - set of helpers to use in test flow or when needed in page objects
  *
@@ -46,7 +48,7 @@ public class TestFunctionality extends AbstractPage {
      * @return WebElement when it is present
      */
     public WebElement waitUntilElementIsLocated(By locator, int sec) {
-        return (new WebDriverWait(driver, sec)).until(ExpectedConditions.presenceOfElementLocated(locator));
+        return (new WebDriverWait(driver, Duration.ofSeconds(sec))).until(ExpectedConditions.presenceOfElementLocated(locator));
     }
 
     /**
@@ -56,7 +58,7 @@ public class TestFunctionality extends AbstractPage {
      * @return WebElement when it is visible
      */
     public WebElement waitUntilElementIsVisible(By locator, int sec) {
-        return (new WebDriverWait(driver, sec)).until(ExpectedConditions.visibilityOfElementLocated(locator));
+        return (new WebDriverWait(driver, Duration.ofSeconds(sec))).until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
 
     /**
@@ -66,7 +68,7 @@ public class TestFunctionality extends AbstractPage {
      * @return WebElement when it is visible
      */
     public WebElement waitUntilElementIsVisible(WebElement el, int sec) {
-        return (new WebDriverWait(driver, sec)).until(ExpectedConditions.visibilityOf(el));
+        return (new WebDriverWait(driver, Duration.ofSeconds(sec))).until(ExpectedConditions.visibilityOf(el));
     }
 
     /**
@@ -75,7 +77,7 @@ public class TestFunctionality extends AbstractPage {
      * @param sec timeout in seconds
      */
     public boolean waitUntilElementIsInvisible(By locator, int sec) {
-        return (new WebDriverWait(driver, sec)).until(ExpectedConditions.invisibilityOfElementLocated(locator));
+        return (new WebDriverWait(driver, Duration.ofSeconds(sec))).until(ExpectedConditions.invisibilityOfElementLocated(locator));
     }
 
     /**
@@ -84,7 +86,7 @@ public class TestFunctionality extends AbstractPage {
      * @param sec timeout in seconds
      */
     public boolean waitUntilElementIsInvisible(WebElement el, int sec) {
-        return (new WebDriverWait(driver, sec)).until(ExpectedConditions.invisibilityOf(el));
+        return (new WebDriverWait(driver, Duration.ofSeconds(sec))).until(ExpectedConditions.invisibilityOf(el));
     }
 
     /**
@@ -94,7 +96,7 @@ public class TestFunctionality extends AbstractPage {
      * @return WebElement when it is clickable
      */
     public WebElement waitUntilElementIsClickable(By locator, int sec) {
-        return (new WebDriverWait(driver, sec)).until(ExpectedConditions.elementToBeClickable(locator));
+        return (new WebDriverWait(driver, Duration.ofSeconds(sec))).until(ExpectedConditions.elementToBeClickable(locator));
     }
 
     /**
@@ -104,7 +106,7 @@ public class TestFunctionality extends AbstractPage {
      * @return WebElement when it is clickable
      */
     public WebElement waitUntilElementIsClickable(WebElement el, int sec) {
-        return (new WebDriverWait(driver, sec)).until(ExpectedConditions.elementToBeClickable(el));
+        return (new WebDriverWait(driver, Duration.ofSeconds(sec))).until(ExpectedConditions.elementToBeClickable(el));
     }
 
     /**
@@ -114,7 +116,7 @@ public class TestFunctionality extends AbstractPage {
      * @return WebElement when it is clickable
      */
     public boolean waitUntilElementIsSelected(By locator, int sec) {
-        return (new WebDriverWait(driver, sec)).until(ExpectedConditions.elementToBeSelected(locator));
+        return (new WebDriverWait(driver, Duration.ofSeconds(sec))).until(ExpectedConditions.elementToBeSelected(locator));
     }
 
     /**
@@ -124,7 +126,7 @@ public class TestFunctionality extends AbstractPage {
      * @return WebElement when it is clickable
      */
     public boolean waitUntilElementIsSelected(WebElement el, int sec) {
-        return (new WebDriverWait(driver, sec)).until(ExpectedConditions.elementToBeSelected(el));
+        return (new WebDriverWait(driver, Duration.ofSeconds(sec))).until(ExpectedConditions.elementToBeSelected(el));
     }
 
     /**
@@ -133,7 +135,7 @@ public class TestFunctionality extends AbstractPage {
      * @param sec timeout in seconds
      */
     public void waitForCondition(ExpectedCondition<?> condition, long sec) {
-        new WebDriverWait(driver, sec).until(condition);
+        new WebDriverWait(driver, Duration.ofSeconds(sec)).until(condition);
     }
 
     /**

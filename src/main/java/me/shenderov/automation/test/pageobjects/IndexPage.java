@@ -1,46 +1,34 @@
 package me.shenderov.automation.test.pageobjects;
 
+import me.shenderov.automation.test.AbstractPage;
+import me.shenderov.automation.test.pageobjects.components.NavBarPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import me.shenderov.automation.test.AbstractPage;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 
 public class IndexPage extends AbstractPage {
 
     /**
      * atLocator to be used in the constructor
      */
-    private static final By atLocator = By.id("easycont");
+    private static final By atLocator = By.id("main");
 
-    private static final String siteNameSelector = "site-name";
-    private static final String siteSloganSelector = "site-slogan";
+    private static final String mainHeader = ".learntocodecontent h1";
+    private static final String siteSloganSelector = ".learntocodecontent .learntocodeh3";
 
     public IndexPage(WebDriver driver) {
         super(driver, atLocator);
     }
 
-    public IndexPage(WebDriver driver, ExpectedCondition<?> condition) {
-        super(driver, condition);
+    public NavBarPage getNavBar(){
+        return new NavBarPage(driver);
     }
 
-    public String getSiteName() {
-        return byId(siteNameSelector).getText();
+    public String getSiteHeader() {
+        return byCss(mainHeader).getText();
     }
 
-    public String getSiteSlogan() {
-        return byId(siteSloganSelector).getText();
-    }
-
-    public TopNavBarPage getTopNavBar() {
-        return new TopNavBarPage(driver);
-    }
-
-    public MenuListPage getMenuList() {
-        return new MenuListPage(driver);
-    }
-
-    public WelcomePage getWelcomePage() {
-        return new WelcomePage(driver);
+    public String getSiteSubheader() {
+        return byCss(siteSloganSelector).getText();
     }
 
 }
