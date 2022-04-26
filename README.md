@@ -18,12 +18,12 @@ Supported Operating Systems:
 
 Supported Browser Configurations:
 * Chrome
+* Chrome(headless)
 * Firefox
 * Opera
 * Edge (macOS and Windows only)
 * Safari (macOS only)
 * Internet Explorer (Windows only)
-* PhantomJS
 * Selenium Hub/Grid
 * BrowserStack
 
@@ -123,11 +123,11 @@ This project can be parameterized using the following parameters:
 
 To use parameters in VM options add -D before the parameter name (e.g. -DdriverType=chrome):
 
-`-DdriverType=chrome -DbaseUrl=https://www.seleniumeasy.com/test/`
+`-DdriverType=chrome -DbaseUrl=https://www.w3schools.com/`
 
 To use parameters in Gradle command line command add -P before the parameter name (e.g. -PdriverType=chrome)
 
-`-PbaseUrl=https://www.seleniumeasy.com/test/`
+`-PbaseUrl=https://www.w3schools.com/`
 
 ### Test Results
 

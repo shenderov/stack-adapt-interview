@@ -8,15 +8,15 @@ import static org.testng.Assert.assertEquals;
 public class IndexPageTest extends BaseTest {
 
     @Test
-    public void validateSiteName() {
-        String siteName = indexPage.getSiteName();
-        assertEquals(siteName, "Selenium Easy");
+    public void validateSiteHeader() {
+        String siteName = indexPage.getSiteHeader();
+        assertEquals(siteName, "Learn to Code");
     }
 
     @Test
-    public void validateSiteSlogan() {
-        String slogan = indexPage.getSiteSlogan();
-        assertEquals(slogan, "Complete Automation Testing Tutorials");
+    public void validateSiteSubheader() {
+        String subheader = indexPage.getSiteSubheader();
+        assertEquals(subheader, "With the world's largest web developer site.");
     }
 
 }

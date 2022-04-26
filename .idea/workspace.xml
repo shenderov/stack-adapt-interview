@@ -1,8 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="944718e2-c5b2-4e4d-acbd-5040b75dec1f" name="Default Changelist" comment="" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <list default="true" id="944718e2-c5b2-4e4d-acbd-5040b75dec1f" name="Default Changelist" comment="New features, improvements and refactor">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/shenderov/automation/test/pageobjects/tutorials/AbstractTutorialPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/shenderov/automation/test/pageobjects/tutorials/ReactTutorialPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/jarAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/test/AbstractPage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/test/pageobjects/IndexPage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/test/pageobjects/MenuListPage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/test/pageobjects/SimpleFormDemoPage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/test/pageobjects/TopNavBarPage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/test/pageobjects/WelcomePage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/BaseTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/IndexPageTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/SimpleFlowTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/tools/DriverManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/tools/ScreenshotOnFail.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/web-automation-starter-java-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/web-automation-starter-java-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/IndexPageTest.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/SimpleFlowTest.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/default-package.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-IndexPageTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-SimpleFlowTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/shenderov/automation/test/AbstractPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/shenderov/automation/test/AbstractPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/shenderov/automation/test/functionality/TestFunctionality.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/shenderov/automation/test/functionality/TestFunctionality.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/shenderov/automation/test/pageobjects/IndexPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/shenderov/automation/test/pageobjects/IndexPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/shenderov/automation/test/pageobjects/MenuListPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/shenderov/automation/test/pageobjects/SimpleFormDemoPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/shenderov/automation/test/pageobjects/TopNavBarPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/shenderov/automation/test/pageobjects/components/NavBarPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/shenderov/automation/test/pageobjects/WelcomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/shenderov/automation/test/pageobjects/tutorials/JavaTutorialPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/me/shenderov/automation/tests/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/me/shenderov/automation/tests/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/me/shenderov/automation/tests/IndexPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/me/shenderov/automation/tests/IndexPageTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/me/shenderov/automation/tests/SimpleFlowTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/me/shenderov/automation/tests/TutorialPagesTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/me/shenderov/automation/tools/DriverManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/me/shenderov/automation/tools/DriverManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/suites/all-classes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/suites/all-classes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/suites/classes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/suites/classes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/suites/groups.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/suites/groups.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,24 +88,6 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="web-automation-starter-java" type="f1a62948:ProjectNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="web-automation-starter-java" type="f1a62948:ProjectNode" />
-                <item name="Source Sets" type="e897c970:GradleViewContributor$SourceSetsNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="web-automation-starter-java" type="f1a62948:ProjectNode" />
-                <item name="Source Sets" type="e897c970:GradleViewContributor$SourceSetsNode" />
-                <item name="test" type="396b929e:GradleViewContributor$SourceSetNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="web-automation-starter-java" type="f1a62948:ProjectNode" />
-                <item name="Source Sets" type="e897c970:GradleViewContributor$SourceSetsNode" />
-                <item name="test" type="396b929e:GradleViewContributor$SourceSetNode" />
-                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
@@ -81,46 +123,54 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="1PXjSyYWMLA4CgDPyvH7g5VCek8" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/kamabizbazti" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.2725" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="test.pageobjects" />
     </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/me/shenderov/automation/test" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src/test/java/tools" />
+      <recent name="$PROJECT_DIR$/src/test/resources/suites" />
+      <recent name="$PROJECT_DIR$/src/test/resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="me.shenderov.automation.test.pageobjects.tutorials" />
+      <recent name="me.shenderov.automation.test.pageobjects" />
+      <recent name="" />
+    </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="TestNG.SimpleFlowTest">
+  <component name="RunManager" selected="Gradle.IndexPageTest">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -133,42 +183,73 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="web-automation-starter-java [buildDependents]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="IndexPageTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
+        <option name="scriptParameters" value="" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value="buildDependents" />
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;me.shenderov.automation.tests.IndexPageTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="web-automation-starter-java [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="SimpleFlowTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
+        <option name="scriptParameters" value="" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value="build" />
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;me.shenderov.automation.tests.SimpleFlowTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="TutorialPagesTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;me.shenderov.automation.tests.TutorialPagesTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
     <configuration name="web-automation-starter-java [init]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -187,7 +268,9 @@
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
     <configuration name="web-automation-starter-java [testClasses]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -206,26 +289,9 @@
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="web-automation-starter-java [wrapper]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="wrapper" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
@@ -235,13 +301,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SimpleFlowTest" type="TestNG" nameIsGenerated="true">
+    <configuration name="IndexPageTest" type="TestNG">
       <option name="SUITE_NAME" value="" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="SimpleFlowTest" />
+      <option name="PACKAGE_NAME" value="me.shenderov.automation.tests" />
+      <option name="MAIN_CLASS_NAME" value="me.shenderov.automation.tests.IndexPageTest" />
       <option name="GROUP_NAME" value="" />
       <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-Ddriver_type=chrome -Dhostname=https://www.seleniumeasy.com/test/" />
+      <option name="VM_PARAMETERS" value="-DdriverType=chrome -DbaseUrl=https://www.seleniumeasy.com/test/" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TutorialPagesTest" type="TestNG" nameIsGenerated="true">
+      <option name="SUITE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="me.shenderov.automation.tests.TutorialPagesTest" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-DdriverType=chrome -DbaseUrl=https://www.seleniumeasy.com/test/" />
       <option name="PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <option name="OUTPUT_DIRECTORY" value="" />
@@ -284,23 +370,37 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Gradle.web-automation-starter-java [build]" />
-      <item itemvalue="Gradle.web-automation-starter-java [buildDependents]" />
-      <item itemvalue="Gradle.web-automation-starter-java [wrapper]" />
       <item itemvalue="Gradle.web-automation-starter-java [init]" />
       <item itemvalue="Gradle.web-automation-starter-java [testClasses]" />
-      <item itemvalue="TestNG.SimpleFlowTest" />
+      <item itemvalue="TestNG.IndexPageTest" />
+      <item itemvalue="Gradle.SimpleFlowTest" />
+      <item itemvalue="Gradle.IndexPageTest" />
+      <item itemvalue="TestNG.TutorialPagesTest" />
+      <item itemvalue="Gradle.TutorialPagesTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.IndexPageTest" />
         <item itemvalue="Gradle.web-automation-starter-java [testClasses]" />
+        <item itemvalue="Gradle.TutorialPagesTest" />
+        <item itemvalue="Gradle.SimpleFlowTest" />
         <item itemvalue="Gradle.web-automation-starter-java [init]" />
-        <item itemvalue="Gradle.web-automation-starter-java [wrapper]" />
-        <item itemvalue="Gradle.web-automation-starter-java [buildDependents]" />
-        <item itemvalue="Gradle.web-automation-starter-java [build]" />
       </list>
     </recent_temporary>
   </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -316,23 +416,78 @@
       <workItem from="1576992793795" duration="51000" />
       <workItem from="1576993003051" duration="23876000" />
       <workItem from="1577064913381" duration="195000" />
+      <workItem from="1577065675052" duration="776000" />
+      <workItem from="1577162367175" duration="4190000" />
+      <workItem from="1577428610456" duration="9161000" />
+      <workItem from="1577942209709" duration="16600000" />
+      <workItem from="1579034055849" duration="231000" />
+      <workItem from="1579034953711" duration="1253000" />
+      <workItem from="1579123079968" duration="1226000" />
+      <workItem from="1579208073290" duration="892000" />
+      <workItem from="1579227257395" duration="344000" />
+      <workItem from="1580538614221" duration="838000" />
+      <workItem from="1586578484905" duration="135000" />
+      <workItem from="1603238431106" duration="9016000" />
+      <workItem from="1650859344094" duration="12150000" />
     </task>
+    <task id="LOCAL-00001" summary="Fix PhantomJS driver">
+      <created>1577606785835</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1577606785835</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Add groups, add TestNG Suite XML support">
+      <created>1577939785333</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1577939785333</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Sample Jenkinsfile">
+      <created>1577940464819</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1577940464819</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Rename variables">
+      <created>1579030943343</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1579030943344</updated>
+    </task>
+    <task id="LOCAL-00005" summary="New features, improvements and refactor">
+      <created>1603250060673</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1603250060673</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Fix PhantomJS driver" />
+    <MESSAGE value="Add groups, add TestNG Suite XML support" />
+    <MESSAGE value="Sample Jenkinsfile" />
+    <MESSAGE value="Rename variables" />
+    <MESSAGE value="New features, improvements and refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="New features, improvements and refactor" />
   </component>
 </project>

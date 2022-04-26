@@ -23,7 +23,7 @@ public abstract class BaseTest {
     /**
      * Base URL. Can be accessed from this class only for test initialization
      */
-    private static String baseUrl = System.getProperty("baseUrl");
+    private static final String baseUrl = System.getProperty("baseUrl");
 
     /**
      * Driver type. Values: chrome, phantomjs, firefox, opera, ie, edge, browserstack, hub
@@ -76,10 +76,9 @@ public abstract class BaseTest {
     /**
      * This method extends the setup method to set up the browser parameters and get open the base URL.
      */
-    private IndexPage initializeTest() throws Exception {
+    private IndexPage initializeTest() {
         Dimension dimension = new Dimension(1920, 1080);
-        if(!driverType.equals("phantomjs"))
-            driver.manage().window().setSize(dimension);
+        driver.manage().window().setSize(dimension);
         driver.get(baseUrl);
         indexPage = new IndexPage(driver);
         return indexPage;
