@@ -27,6 +27,7 @@ dependencies {
     implementation "io.github.bonigarcia:webdrivermanager:5.1.1"
     implementation "org.testng:testng:7.5"
     implementation "org.apache.httpcomponents:httpclient:4.5.13"
+    implementation "com.influxdb:influxdb-client-java:6.6.0"
 }
 
 //Default base URL value
@@ -44,6 +45,11 @@ test {
     systemProperty "capabilitiesFilename", project.hasProperty("capabilitiesFilename") ? project.property("capabilitiesFilename") : null //set capabilities filename
     systemProperty "jobName", project.hasProperty("jobName") ? project.property("jobName") : null //Jenkins job name to use in Test listener
     systemProperty "buildNumber", project.hasProperty("buildNumber") ? project.property("buildNumber") : null //Jenkins build number to use in Test listener
+    systemProperty "enableInfluxDB", project.hasProperty("enableInfluxDB") ? project.property("enableInfluxDB") : false //If true, send test results to InfluxDB
+    systemProperty "influxUrl", project.hasProperty("influxUrl") ? project.property("influxUrl") : null
+    systemProperty "influxToken", project.hasProperty("influxToken") ? project.property("influxToken") : null
+    systemProperty "influxBucket", project.hasProperty("influxBucket") ? project.property("influxBucket") : null
+    systemProperty "influxOrg", project.hasProperty("influxOrg") ? project.property("influxOrg") : null
     //Config TestNG
     useTestNG() {
         useDefaultListeners = true
