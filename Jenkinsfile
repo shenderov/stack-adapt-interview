@@ -45,7 +45,7 @@ pipeline {
                     if("${params.ENABLE_INFLUX}"){
                         withCredentials([string(credentialsId: "INFLUX_TOKEN", variable: 'secretText')]) {
                             echo "Start test running and sending data to InfluxDB..."
-                            sh '$EXEC_CMD -PenableInfluxDB=$params.ENABLE_INFLUX -PinfluxUrl=$params.INFLUX_URL -PinfluxBucket=$params.INFLUX_BUCKET -PinfluxOrg=$params.INFLUX_ORG -PinfluxToken=$secretText'
+                            sh '$EXEC_CMD -PenableInfluxDB=$ENABLE_INFLUX -PinfluxUrl=$INFLUX_URL -PinfluxBucket=$INFLUX_BUCKET -PinfluxOrg=$INFLUX_ORG -PinfluxToken=$secretText'
                         }
                     }else {
                         echo "Start test running..."
