@@ -26,7 +26,7 @@ import java.util.ArrayList;
  */
 public class TestListener implements ITestListener {
 
-    private final Boolean influxDBEnabled = Boolean.getBoolean(System.getProperty("enableInfluxDB"));
+    private final Boolean influxDBEnabled = Boolean.valueOf(System.getProperty("enableInfluxDB"));
     private InfluxDBSender sender;
 
     @Override
