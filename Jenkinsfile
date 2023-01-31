@@ -4,6 +4,10 @@ pipeline {
         disableConcurrentBuilds()
     }
 
+    environment {
+        EXEC_CMD = "./gradlew clean test -PdriverType=${params.BROWSER} "
+    }
+
     parameters {
         string(name: "BRANCH", description: "Branch to build from", defaultValue: "master")
         string(name: "BASE_URL", description: "Override default base URL", defaultValue: "")
@@ -27,8 +31,14 @@ pipeline {
         stage ('Test') {
             steps {
                 script {
+                    if("${params.BASE_URL}" != ""){
+                        EXEC_CMD += "-PbaseUrl=${params.BASE_URL} "
+                    }
+                    if("${params.SUITE_FILE}" != ""){
+                        EXEC_CMD += "-PsuiteFile=${params.SUITE_FILE}"
+                    }
                     echo "Start test running..."
-                    sh "./gradlew clean test -PdriverType=${params.BROWSER} -PbaseUrl=${params.BASE_URL} -PsuiteFile=${params.SUITE_FILE}"
+                    sh "${EXEC_CMD}"
                 }
             }
         }
