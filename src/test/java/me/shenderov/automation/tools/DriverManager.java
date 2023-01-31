@@ -70,6 +70,10 @@ public class DriverManager {
                     ChromeOptions headlessOptions = new ChromeOptions();
                     headlessOptions.addArguments("--headless");
                     headlessOptions.addArguments("--disable-gpu");
+                    headlessOptions.addArguments("--no-sandbox");
+                    headlessOptions.addArguments("enable-automation");
+                    headlessOptions.addArguments("--disable-infobars");
+                    headlessOptions.addArguments("--disable-dev-shm-usage");
                     driver = new ChromeDriver(headlessOptions);
                     break;
                 case "firefox":
