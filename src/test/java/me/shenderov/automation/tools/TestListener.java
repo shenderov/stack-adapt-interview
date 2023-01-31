@@ -108,10 +108,10 @@ public class TestListener implements ITestListener {
         Point point = Point
                 .measurement("testmethod")
                 .time(Instant.now(), WritePrecision.NS)
-                .addTag("testclass", iTestResult.getTestClass().getName())
-                .addTag("name", iTestResult.getName())
-                .addTag("description", iTestResult.getMethod().getDescription())
-                .addTag("result", status)
+                .addField("testclass", iTestResult.getTestClass().getName())
+                .addField("name", iTestResult.getName())
+                .addField("description", iTestResult.getMethod().getDescription())
+                .addField("result", status)
                 .addField("duration", (iTestResult.getEndMillis() - iTestResult.getStartMillis()));
         sender.send(point);
     }
@@ -120,8 +120,12 @@ public class TestListener implements ITestListener {
         Point point = Point
                 .measurement("testclass")
                 .time(Instant.now(), WritePrecision.NS)
-                .addTag("name", iTestContext.getAllTestMethods()[0].getTestClass().getName())
-                .addField("duration", (iTestContext.getEndDate().getTime() - iTestContext.getStartDate().getTime()));
+                .addField("name", iTestContext.getAllTestMethods()[0].getTestClass().getName())
+                .addField("duration", (iTestContext.getEndDate().getTime() - iTestContext.getStartDate().getTime()))
+                .addField("total_tests", (iTestContext.getAllTestMethods().length))
+                .addField("passed_tests", (iTestContext.getPassedTests().size()))
+                .addField("failed_tests", (iTestContext.getFailedTests().size()))
+                .addField("skipped_tests", (iTestContext.getSkippedTests().size()));
         sender.send(point);
     }
 
