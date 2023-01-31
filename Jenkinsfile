@@ -43,13 +43,15 @@ pipeline {
                         EXEC_CMD += "-PsuiteFile="${params.SUITE_FILE}" "
                     }
                     if("${params.ENABLE_INFLUX}"){
-                        EXEC_CMD += "-PenableInfluxDB="${params.ENABLE_INFLUX}" -PinfluxUrl="${params.INFLUX_URL}" -PinfluxBucket="${params.INFLUX_BUCKET}" -PinfluxOrg="${params.INFLUX_ORG}" "
                         withCredentials([string(credentialsId: "INFLUX_TOKEN", variable: 'secretText')]) {
-                            EXEC_CMD += "-PinfluxToken=${secretText}"
+                        EXEC_CMD += "-PenableInfluxDB="${params.ENABLE_INFLUX}" -PinfluxUrl="${params.INFLUX_URL}" -PinfluxBucket="${params.INFLUX_BUCKET}" -PinfluxOrg="${params.INFLUX_ORG}" -PinfluxToken="${secretText}""
+                         echo "Start test running and sending data to InfluxDB..."
+                         sh "${EXEC_CMD}"
                         }
+                    }else {
+                        echo "Start test running..."
+                        sh "${EXEC_CMD}"
                     }
-                    echo "Start test running..."
-                    sh "${EXEC_CMD}"
                 }
             }
         }
