@@ -6,7 +6,7 @@ pipeline {
 
     parameters {
         string(name: "BRANCH", description: "Branch to build from", defaultValue: "master")
-        string(name: "BASE_URL", description: "Override default base URL", defaultValue: "https://stackadapt-interview.s3.amazonaws.com/support/Chrysler+Optical+A+D-Frame+in+Tortoiseshell+by+LINDA+FARROW+Linear+%E2%80%93+LINDA+FARROW+(U.S.).html")
+        string(name: "BASE_URL", description: "Override default base URL", defaultValue: "")
         string(name: "SUITE_FILE", description: "Specify TestNG Suite XML file under src/test/resources/suites/", defaultValue: "")
         choice(name: 'BROWSER', description: "NOTE: In order to run driver different from PhantomJS, you need an agent with GUI and browser installed", choices: 'phantomjs\nchrome\nfirefox\nopera\nie\nedge')
     }
