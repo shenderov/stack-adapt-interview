@@ -1,7 +1,11 @@
 package me.shenderov.automation.test.functionality;
 
 import me.shenderov.automation.test.AbstractPage;
-import org.openqa.selenium.*;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -22,6 +26,28 @@ public class TestFunctionality extends AbstractPage {
      */
     public TestFunctionality(WebDriver driver) {
         super(driver);
+    }
+
+    /**
+     * Hover over element and optional click
+     * @param element web element to hover
+     * @param click click on element after hovering if true
+     */
+    public void hoverOverElement(WebElement element, boolean click) {
+        Actions actions = new Actions(driver);
+        actions.moveToElement(element);
+        if(click){
+            actions.click();
+        }
+        actions.build().perform();
+    }
+
+    /**
+     * Hover over element
+     * @param element web element to hover
+     */
+    public void hoverOverElement(WebElement element) {
+        hoverOverElement(element, false);
     }
 
     /**

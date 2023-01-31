@@ -214,6 +214,14 @@ public abstract class AbstractPage {
     }
 
     /**
+     * Get Element by locator and hover over it
+     * @param locator By locator of the element to hover over
+     */
+    public void hoverOverElement(By locator) {
+        Functionalities.getTestFunctionality(driver).hoverOverElement(byLocator(locator));
+    }
+
+    /**
      * Wait until web element of atLocator is visible on the web page. Used for constructor only so the method is private.
      */
     private void waitForAtLocator(){

@@ -5,8 +5,7 @@
     <test name="groups">
         <groups>
             <run>
-                <include name="index"/>
-                <exclude name="tutorials"/>
+                <include name="product"/>
             </run>
         </groups>
         <packages>
