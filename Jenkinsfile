@@ -12,7 +12,7 @@ pipeline {
         string(name: "BRANCH", description: "Branch to build from", defaultValue: "master")
         string(name: "BASE_URL", description: "Override default base URL", defaultValue: "")
         string(name: "SUITE_FILE", description: "Specify TestNG Suite XML file under src/test/resources/suites/", defaultValue: "")
-        choice(name: 'BROWSER', description: "NOTE: In order to run tests, you need an agent with browser installed", choices: 'headless\nchrome\nfirefox\nopera\nie\nedge')
+        choice(name: 'BROWSER', description: "NOTE: In order to run tests, you need an agent with browser installed", choices: 'headless\nchrome\nfirefox\nie\nedge')
     }
 
     agent any
@@ -32,10 +32,10 @@ pipeline {
             steps {
                 script {
                     if("${params.BASE_URL}" != ""){
-                        EXEC_CMD += "-PbaseUrl=${params.BASE_URL} "
+                        EXEC_CMD += "-PbaseUrl="${params.BASE_URL}" "
                     }
                     if("${params.SUITE_FILE}" != ""){
-                        EXEC_CMD += "-PsuiteFile=${params.SUITE_FILE}"
+                        EXEC_CMD += "-PsuiteFile="${params.SUITE_FILE}""
                     }
                     echo "Start test running..."
                     sh "${EXEC_CMD}"

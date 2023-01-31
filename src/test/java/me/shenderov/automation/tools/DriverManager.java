@@ -8,7 +8,6 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
-import org.openqa.selenium.opera.OperaDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.safari.SafariDriver;
@@ -77,10 +76,6 @@ public class DriverManager {
                     WebDriverManager.firefoxdriver().setup();
                     driver = new FirefoxDriver();
                     break;
-                case "opera":
-                    WebDriverManager.operadriver().setup();
-                    driver = new OperaDriver();
-                    break;
                 case "edge":
                     WebDriverManager.edgedriver().setup();
                     driver = new EdgeDriver();
@@ -96,13 +91,13 @@ public class DriverManager {
                     break;
                 case "browserstack":
                     setBrowserstackCredentials();
-                    RemoteWebDriver remoteWebDriver = new RemoteWebDriver(new URL(BROWSERSTACK_URL), getCapabilities(driverType));
+                    RemoteWebDriver remoteWebDriver = new RemoteWebDriver(new URL(BROWSERSTACK_URL), Objects.requireNonNull(getCapabilities(driverType)));
                     System.setProperty("remote.session.id", remoteWebDriver.getSessionId().toString());
                     driver = remoteWebDriver;
                     break;
                 case "hub":
                     setHubUrl();
-                    driver = new RemoteWebDriver(new URL(HUB_URL), getCapabilities(driverType));
+                    driver = new RemoteWebDriver(new URL(HUB_URL), Objects.requireNonNull(getCapabilities(driverType)));
                     break;
                 default:
                     throw new Exception("Unknown Driver type. Supported types: chrome, firefox, opera, phantomjs, ie, edge, safari, browserstack, hub");
