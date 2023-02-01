@@ -109,10 +109,10 @@ public class TestListener implements ITestListener {
                 .measurement("testmethod")
                 .time(Instant.now(), WritePrecision.NS)
                 .addTag("testclass", iTestResult.getTestClass().getName())
-                .addTag("name", iTestResult.getName())
-                .addTag("description", iTestResult.getMethod().getDescription())
-                .addTag("result", status)
-                .addTag("duration", String.valueOf(iTestResult.getEndMillis() - iTestResult.getStartMillis()));
+                .addField("testname", iTestResult.getName())
+                .addField("description", iTestResult.getMethod().getDescription())
+                .addField("result", status)
+                .addField("duration", String.valueOf(iTestResult.getEndMillis() - iTestResult.getStartMillis()));
         sender.send(point);
     }
 
@@ -120,12 +120,12 @@ public class TestListener implements ITestListener {
         Point point = Point
                 .measurement("testclass")
                 .time(Instant.now(), WritePrecision.NS)
-                .addTag("name", iTestContext.getAllTestMethods()[0].getTestClass().getName())
-                .addTag("duration", String.valueOf(iTestContext.getEndDate().getTime() - iTestContext.getStartDate().getTime()))
-                .addTag("total_tests", String.valueOf(iTestContext.getAllTestMethods().length))
-                .addTag("passed_tests", String.valueOf(iTestContext.getPassedTests().size()))
-                .addTag("failed_tests", String.valueOf(iTestContext.getFailedTests().size()))
-                .addTag("skipped_tests", String.valueOf(iTestContext.getSkippedTests().size()));
+                .addTag("classname", iTestContext.getAllTestMethods()[0].getTestClass().getName())
+                .addField("duration", String.valueOf(iTestContext.getEndDate().getTime() - iTestContext.getStartDate().getTime()))
+                .addField("total_tests", String.valueOf(iTestContext.getAllTestMethods().length))
+                .addField("passed_tests", String.valueOf(iTestContext.getPassedTests().size()))
+                .addField("failed_tests", String.valueOf(iTestContext.getFailedTests().size()))
+                .addField("skipped_tests", String.valueOf(iTestContext.getSkippedTests().size()));
         sender.send(point);
     }
 
